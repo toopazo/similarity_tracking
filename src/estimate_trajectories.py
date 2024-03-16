@@ -3,7 +3,7 @@
 
 import numpy as np
 import pandas as pd
-import random
+import os
 import matplotlib.pyplot as plt
 from generate_trajectories import TraGen
 from munkres import Munkres, print_matrix
@@ -51,11 +51,19 @@ class TraEstim:
         print(transitions.shape)
 
         estim_traj = self.estimate_trajectories(observations=pos_obs, op="hungarian")
-        # estim_traj = self.estimate_trajectories(observations=des_obs, op="hungarian")
         print(estim_traj)
         print(estim_traj.shape)
 
         self.plot_estimated_trajectories(pos_obs, estim_traj)
+        os.rename(
+            "plot_estimated_trajectories.png", "plot_estimated_trajectories_pos.png"
+        )
+
+        estim_traj = self.estimate_trajectories(observations=des_obs, op="hungarian")
+        self.plot_estimated_trajectories(pos_obs, estim_traj)
+        os.rename(
+            "plot_estimated_trajectories.png", "plot_estimated_trajectories_des.png"
+        )
 
     def plot_estimated_trajectories(
         self, observations: np.ndarray, estim_traj: np.ndarray
@@ -128,12 +136,12 @@ class TraEstim:
             obs1 = observations[:, si, :]
             obs0 = observations[:, si - 1, :]
             transitions = self.chose_predecessor(obs1, obs0, op=op)
-            print("transitions")
-            print(transitions)
+            # print("transitions")
+            # print(transitions)
             # print(transitions.shape)
 
             previous_bbox = transitions[:, 0]
-            print(previous_bbox)
+            # print(previous_bbox)
             estim_traj[:, si - 1] = previous_bbox
 
         return np.array(estim_traj)
