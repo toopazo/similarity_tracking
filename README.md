@@ -18,7 +18,9 @@ Primero que todo, hay varios supuestos subyacentes:
 Obviamente se puede tratar de combinar la distancia en posición y la distancia en descripción de manera de diferenciar dos objetos iguales pero ubicados lejos uno de otro (e.g. dos manzanas), pero esto se deja para otra ocasión.
 
 Los objetos son detectados y pasados al estimador como observaciones. Si la secuencia tiene $m$ instantes (frames) se asume que habrán $m$ observaciónes. Se asume que habiendo $n$ objetos para cada instante (frame) se tendrá un vector $\boldsymbol{v}_j^{i}$ de largo 2 (una imagén es 2D) para posición $(x, y)$ y $d$ en el caso del descriptor de ese objeto (tipicamente 256, 512 o 1024). Por lo tanto el total de observaciones se puede resumir en
-$$\boldsymbol{Y} = 
+
+$$
+\boldsymbol{Y} = 
 \begin{bmatrix}
 \boldsymbol{y}^{1} & \boldsymbol{y}^{2} & .. & \boldsymbol{y}^{m}\end{bmatrix}
 =
@@ -29,11 +31,15 @@ $$\boldsymbol{Y} =
 \boldsymbol{v}_n^{1} & \boldsymbol{v}_n^{2} & .. & \boldsymbol{v}_{n}^{m} 
 \end{bmatrix}
 
- \in \mathbb{R}^{\ n \times m \times d} \ , \ \boldsymbol{v} \in \mathbb{R}^{\ 1 \times d} $$ 
+ \in \mathbb{R}^{\ n \times m \times d} \ , \ \boldsymbol{v} \in \mathbb{R}^{\ 1 \times d} 
+ $$ 
+
 donde, $n$ es el el número de objetos detectados, $m$ es el número de instantes (frames) y $d$ es el largo del vector (posición o descriptor).
 
 El error entre la observación del instante actual $\boldsymbol{y}^{\ i}$ y el anterior $\boldsymbol{y}^{\ i-1}$ se calcular uno a uno
-$$ \boldsymbol{e} = 
+
+$$
+\boldsymbol{e} = 
 \begin{bmatrix}
 || \boldsymbol{v}_1^{\ i} - \boldsymbol{v}_1^{\ i-1} || & || \boldsymbol{v}_2^{\ i} - \boldsymbol{v}_1^{\ i-1} || & .. & || \boldsymbol{v}_n^{\ i} - \boldsymbol{v}_1^{\ i-1} || \\
 || \boldsymbol{v}_1^{\ i} - \boldsymbol{v}_2^{\ i-1} || & || \boldsymbol{v}_2^{\ i} - \boldsymbol{v}_2^{\ i-1}  || & .. & || \boldsymbol{v}_n^{\ i} - \boldsymbol{v}_2^{\ i-1} || \\  
