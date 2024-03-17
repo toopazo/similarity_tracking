@@ -22,7 +22,8 @@ Los objetos son detectados y pasados al estimador como observaciones. Si la secu
 $$
 \boldsymbol{Y} = 
 \begin{bmatrix}
-\boldsymbol{y}^{1} & \boldsymbol{y}^{2} & .. & \boldsymbol{y}^{m}\end{bmatrix}
+\boldsymbol{y}^{1} & \boldsymbol{y}^{2} & .. & \boldsymbol{y}^{m} \\
+\end{bmatrix}
 =
 \begin{bmatrix}
 \boldsymbol{v}_1^{1} & \boldsymbol{v}_1^{2} & .. & \boldsymbol{v}_1^{m} \\ 
