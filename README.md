@@ -45,7 +45,7 @@ $$
 
 La asignación de detecciones entre el instante actual y el anterior, que minimiza el error, se realiza con el método hungaro (también llamado munkres).
 
-## Ejemplo de uso en una caminata aleatoria 
+## Ejemplo
 
 El siguiente ejemplo ilustra 3 objetos detectados en 15 frames seguidos. Esta caminata esa aleatoria, pero esta sesgada hacia la esquina superior derecha.
 
