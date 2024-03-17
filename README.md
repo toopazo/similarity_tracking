@@ -23,8 +23,7 @@ $$
 \boldsymbol{Y} = 
 \begin{bmatrix}
 \boldsymbol{y}^{1} & \boldsymbol{y}^{2} & .. & \boldsymbol{y}^{m} \\
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \boldsymbol{v}_1^{1} & \boldsymbol{v}_1^{2} & .. & \boldsymbol{v}_1^{m} \\ 
 \boldsymbol{v}_2^{1} & \boldsymbol{v}_2^{2} & .. & \boldsymbol{v}_2^{m} \\ 
