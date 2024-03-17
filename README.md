@@ -30,7 +30,7 @@ $$
 .. & .. & .. & .. \\ 
 \boldsymbol{v}_n^{1} & \boldsymbol{v}_n^{2} & .. & \boldsymbol{v}_n^{m} \\ 
 \end{bmatrix} 
-\in \mathbb{R}^{\ n \times m \times d} \ ; \ \boldsymbol{v}_j^{i} \in \mathbb{R}^{\ 1 \times d} 
+\in \mathbb{R}^{\ n \times m \times d} \ , \ \boldsymbol{v}_j^{i} \in \mathbb{R}^{\ 1 \times d} 
  $$ 
 
 donde, $n$ es el el número de objetos detectados, $m$ es el número de instantes (frames) y $d$ es el largo del vector (posición o descriptor).
