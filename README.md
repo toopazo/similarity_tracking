@@ -26,6 +26,8 @@ $$
 \end{bmatrix} =
 \begin{bmatrix}
 \boldsymbol{v}_1^{1} & \boldsymbol{v}_1^{2} & .. & \boldsymbol{v}_1^{m} \\ 
+\boldsymbol{v}_2^{1} & \boldsymbol{v}_2^{2} & .. & \boldsymbol{v}_2^{m} \\ 
+.. & .. & .. & .. \\ 
 \end{bmatrix} 
 \in \mathbb{R}^{\ n \times m \times d} \ ; \ \boldsymbol{v}_j^{i} \in \mathbb{R}^{\ 1 \times d} 
  $$ 
