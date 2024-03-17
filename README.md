@@ -30,7 +30,6 @@ $$
 .. & .. & .. & \\ 
 \boldsymbol{v}_n^{1} & \boldsymbol{v}_n^{2} & .. & \boldsymbol{v}_{n}^{m} 
 \end{bmatrix}
-
  \in \mathbb{R}^{\ n \times m \times d} \ , \ \boldsymbol{v} \in \mathbb{R}^{\ 1 \times d} 
  $$ 
 
