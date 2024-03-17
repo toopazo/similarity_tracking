@@ -28,9 +28,8 @@ $$
 \boldsymbol{v}_1^{1} & \boldsymbol{v}_1^{2} & .. & \boldsymbol{v}_1^{m} \\ 
 \boldsymbol{v}_2^{1} & \boldsymbol{v}_2^{2} & .. & \boldsymbol{v}_2^{m} \\ 
 .. & .. & .. & .. \\ 
-\boldsymbol{v}_n^{1} & \boldsymbol{v}_n^{2} & .. & \boldsymbol{v}_{n}^{m} \\
+\boldsymbol{v}_n^{1} & \boldsymbol{v}_n^{2} & .. & \boldsymbol{v}_{n}^{m} \\ 
 \end{bmatrix} 
-\in \mathbb{R}^{\ n \times m \times d} \ , \ \boldsymbol{v}_j^{i} \in \mathbb{R}^{\ 1 \times d} 
  $$ 
 
 donde, $n$ es el el número de objetos detectados, $m$ es el número de instantes (frames) y $d$ es el largo del vector (posición o descriptor).
